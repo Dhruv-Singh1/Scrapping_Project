@@ -43,7 +43,7 @@ def main():
     csw.writerow(['Name ', 'Degree ', 'Carrer Level ', 'Membership', 'Skills', 'Goal',' Certification' ])
     page_number = 1
     count = 1
-    while count < 2:
+    while count < 100:
         url = "https://www.myvisajobs.com/CV/Candidates.aspx?P={ab}".format(ab=page_number)
         home = requests.get(url).content
         pgH = BeautifulSoup(home,'html.parser')
